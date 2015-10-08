@@ -1,0 +1,5 @@
+/Carthage/Build/
+.DS_Store
+Pods
+Fitness\ Challenge.xcworkspace/xcuserdata
+Fitness\	 Challenge.xcodeproj/xcuserdata
