@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		074997AD86DB4FCE6F4E5636 /* Pods_Fitness_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F063DE2524691F8C510D39B1 /* Pods_Fitness_Challenge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BAAB85351BC66DB5000D0DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85341BC66DB5000D0DB1 /* AppDelegate.swift */; };
 		BAAB85371BC66DB5000D0DB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85361BC66DB5000D0DB1 /* ViewController.swift */; };
 		BAAB853A1BC66DB5000D0DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAB85381BC66DB5000D0DB1 /* Main.storyboard */; };
@@ -14,6 +15,14 @@
 		BAAB853F1BC66DB5000D0DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAB853D1BC66DB5000D0DB1 /* LaunchScreen.storyboard */; };
 		BAAB854A1BC66DB5000D0DB1 /* Fitness_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85491BC66DB5000D0DB1 /* Fitness_ChallengeTests.swift */; };
 		BAAB85551BC66DB5000D0DB1 /* Fitness_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85541BC66DB5000D0DB1 /* Fitness_ChallengeUITests.swift */; };
+		BAAB85651BC67368000D0DB1 /* ServicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85641BC67368000D0DB1 /* ServicesController.swift */; settings = {ASSET_TAGS = (); }; };
+		BAAB85691BC6745E000D0DB1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85681BC6745E000D0DB1 /* UserModel.swift */; settings = {ASSET_TAGS = (); }; };
+		BAAB856B1BC67493000D0DB1 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB856A1BC67493000D0DB1 /* SettingModel.swift */; settings = {ASSET_TAGS = (); }; };
+		BAAB856D1BC674D6000D0DB1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB856C1BC674D6000D0DB1 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BAAB856F1BC67500000D0DB1 /* AppearanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB856E1BC67500000D0DB1 /* AppearanceController.swift */; settings = {ASSET_TAGS = (); }; };
+		BAAB85721BC67547000D0DB1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85711BC67547000D0DB1 /* UIColorExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		BAAB85741BC67579000D0DB1 /* NSURLResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85731BC67579000D0DB1 /* NSURLResponseExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		BAAB85761BC67601000D0DB1 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85751BC67601000D0DB1 /* NavController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		688D82F3D6CBF942CD8A4617 /* Pods-Fitness Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitness Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fitness Challenge/Pods-Fitness Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		BAAB85311BC66DB5000D0DB1 /* Fitness Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fitness Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAAB85341BC66DB5000D0DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAAB85361BC66DB5000D0DB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,16 @@
 		BAAB85501BC66DB5000D0DB1 /* Fitness ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fitness ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAAB85541BC66DB5000D0DB1 /* Fitness_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fitness_ChallengeUITests.swift; sourceTree = "<group>"; };
 		BAAB85561BC66DB5000D0DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAAB85641BC67368000D0DB1 /* ServicesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServicesController.swift; path = Controllers/ServicesController.swift; sourceTree = "<group>"; };
+		BAAB85681BC6745E000D0DB1 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Models/UserModel.swift; sourceTree = "<group>"; };
+		BAAB856A1BC67493000D0DB1 /* SettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingModel.swift; path = Models/SettingModel.swift; sourceTree = "<group>"; };
+		BAAB856C1BC674D6000D0DB1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		BAAB856E1BC67500000D0DB1 /* AppearanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppearanceController.swift; path = Controllers/AppearanceController.swift; sourceTree = "<group>"; };
+		BAAB85711BC67547000D0DB1 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Helpers/UIColorExtension.swift; sourceTree = "<group>"; };
+		BAAB85731BC67579000D0DB1 /* NSURLResponseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSURLResponseExtension.swift; path = Helpers/NSURLResponseExtension.swift; sourceTree = "<group>"; };
+		BAAB85751BC67601000D0DB1 /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavController.swift; path = Controllers/NavController.swift; sourceTree = "<group>"; };
+		F063DE2524691F8C510D39B1 /* Pods_Fitness_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitness_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F782B17F2C1C7BF84433AF11 /* Pods-Fitness Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitness Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fitness Challenge/Pods-Fitness Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074997AD86DB4FCE6F4E5636 /* Pods_Fitness_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +95,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1029E050643C854FB4DE0385 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F063DE2524691F8C510D39B1 /* Pods_Fitness_Challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		202C8FC2702CEFFDFD550103 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F782B17F2C1C7BF84433AF11 /* Pods-Fitness Challenge.debug.xcconfig */,
+				688D82F3D6CBF942CD8A4617 /* Pods-Fitness Challenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BAAB85281BC66DB5000D0DB1 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				BAAB85481BC66DB5000D0DB1 /* Fitness ChallengeTests */,
 				BAAB85531BC66DB5000D0DB1 /* Fitness ChallengeUITests */,
 				BAAB85321BC66DB5000D0DB1 /* Products */,
+				202C8FC2702CEFFDFD550103 /* Pods */,
+				1029E050643C854FB4DE0385 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +137,9 @@
 		BAAB85331BC66DB5000D0DB1 /* Fitness Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				BAAB85701BC6752E000D0DB1 /* Helpers */,
+				BAAB85671BC6741A000D0DB1 /* Models */,
+				BAAB85661BC6736B000D0DB1 /* Controllers */,
 				BAAB85341BC66DB5000D0DB1 /* AppDelegate.swift */,
 				BAAB85361BC66DB5000D0DB1 /* ViewController.swift */,
 				BAAB85381BC66DB5000D0DB1 /* Main.storyboard */,
@@ -125,6 +168,35 @@
 			path = "Fitness ChallengeUITests";
 			sourceTree = "<group>";
 		};
+		BAAB85661BC6736B000D0DB1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BAAB85641BC67368000D0DB1 /* ServicesController.swift */,
+				BAAB856C1BC674D6000D0DB1 /* LoginViewController.swift */,
+				BAAB856E1BC67500000D0DB1 /* AppearanceController.swift */,
+				BAAB85751BC67601000D0DB1 /* NavController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BAAB85671BC6741A000D0DB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAAB85681BC6745E000D0DB1 /* UserModel.swift */,
+				BAAB856A1BC67493000D0DB1 /* SettingModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BAAB85701BC6752E000D0DB1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BAAB85711BC67547000D0DB1 /* UIColorExtension.swift */,
+				BAAB85731BC67579000D0DB1 /* NSURLResponseExtension.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAAB85591BC66DB5000D0DB1 /* Build configuration list for PBXNativeTarget "Fitness Challenge" */;
 			buildPhases = (
+				D0A67709A5DA10473E42E795 /* Check Pods Manifest.lock */,
 				BAAB852D1BC66DB5000D0DB1 /* Sources */,
 				BAAB852E1BC66DB5000D0DB1 /* Frameworks */,
 				BAAB852F1BC66DB5000D0DB1 /* Resources */,
+				8CA7C14AAC568EE075A130F7 /* Embed Pods Frameworks */,
+				756AEEEE4D58666EAF43FB0E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,13 +325,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		756AEEEE4D58666EAF43FB0E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fitness Challenge/Pods-Fitness Challenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CA7C14AAC568EE075A130F7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fitness Challenge/Pods-Fitness Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0A67709A5DA10473E42E795 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BAAB852D1BC66DB5000D0DB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAB856D1BC674D6000D0DB1 /* LoginViewController.swift in Sources */,
+				BAAB856B1BC67493000D0DB1 /* SettingModel.swift in Sources */,
 				BAAB85371BC66DB5000D0DB1 /* ViewController.swift in Sources */,
+				BAAB85721BC67547000D0DB1 /* UIColorExtension.swift in Sources */,
+				BAAB856F1BC67500000D0DB1 /* AppearanceController.swift in Sources */,
+				BAAB85761BC67601000D0DB1 /* NavController.swift in Sources */,
+				BAAB85651BC67368000D0DB1 /* ServicesController.swift in Sources */,
+				BAAB85691BC6745E000D0DB1 /* UserModel.swift in Sources */,
 				BAAB85351BC66DB5000D0DB1 /* AppDelegate.swift in Sources */,
+				BAAB85741BC67579000D0DB1 /* NSURLResponseExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +527,7 @@
 		};
 		BAAB855A1BC66DB5000D0DB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F782B17F2C1C7BF84433AF11 /* Pods-Fitness Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Fitness Challenge/Info.plist";
@@ -407,6 +539,7 @@
 		};
 		BAAB855B1BC66DB5000D0DB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 688D82F3D6CBF942CD8A4617 /* Pods-Fitness Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Fitness Challenge/Info.plist";
@@ -483,6 +616,7 @@
 				BAAB855B1BC66DB5000D0DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAAB855C1BC66DB5000D0DB1 /* Build configuration list for PBXNativeTarget "Fitness ChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +625,7 @@
 				BAAB855E1BC66DB5000D0DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAAB855F1BC66DB5000D0DB1 /* Build configuration list for PBXNativeTarget "Fitness ChallengeUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +634,7 @@
 				BAAB85611BC66DB5000D0DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

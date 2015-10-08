@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (2.0.2)
+  - FrameAccessor (1.3.2)
+  - GraphKit (1.1.1):
+    - FrameAccessor (~> 1.3.2)
+    - MKFoundationKit/NSArray (~> 1.2.2)
+  - IQKeyboardManager (3.3.2)
+  - KeychainAccess (2.0.1)
+  - MKFoundationKit/NSArray (1.2.3)
+  - Rollbar (0.1.5)
+  - SVProgressHUD (1.1.3)
+  - SwiftyJSON (2.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - GraphKit
+  - IQKeyboardManager
+  - KeychainAccess
+  - Rollbar
+  - SVProgressHUD
+  - SwiftyJSON (~> 2.3)
+
+SPEC CHECKSUMS:
+  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
+  FrameAccessor: 0f7ba6ce37be9a5d0302a27c731dca70af8d438b
+  GraphKit: e2336bed87d9313020af525dedbca54b62e93533
+  IQKeyboardManager: d863eb0bca424d1f6dad6bdd1f856af52664add8
+  KeychainAccess: 4f43261905701098847f6995a2de3fe8b90284df
+  MKFoundationKit: 882d74557944790d4d9e172961ed71d6a66804b7
+  Rollbar: 6b4be007d57f434cd48f7cce52862013c6bd64cb
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
+
+COCOAPODS: 0.38.2
