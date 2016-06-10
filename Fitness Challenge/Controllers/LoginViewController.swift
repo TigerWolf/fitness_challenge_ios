@@ -7,7 +7,7 @@
 
 import UIKit
 import QuartzCore
-import SVProgressHUD
+//import SVProgressHUD
 import SwiftyJSON
 
 class LoginViewController: UIViewController {
@@ -158,7 +158,7 @@ class LoginViewController: UIViewController {
                             if let jsonObj: AnyObject = result.value {
                                 var json = JSON(jsonObj)
                                 
-                                Services.user = User(id: json["userid"].stringValue, username: username)
+                                Services.user = User(id: json["data"]["id"].stringValue, username: username, team: json["data"]["team"].stringValue)
                                 Services.user?.password = password
                                 
                                 // Refresh the details for user specific info
@@ -188,8 +188,7 @@ class LoginViewController: UIViewController {
     }
     
     func proceedToNextBoard() {
-//        let viewController:CoursesViewController = UIStoryboard(name: "CourseStudents", bundle: nil).instantiateViewControllerWithIdentifier("CourseController") as! CoursesViewController
-        let viewController = UINavigationController()
+        let viewController = ActivityViewController()
         let navigationController = NavController(rootViewController: viewController)
         
         self.presentViewController(navigationController, animated: true, completion: nil)
@@ -202,6 +201,7 @@ class LoginViewController: UIViewController {
         if let password = Services.user?.password, let username = Services.user?.username where
             password.characters.count > 0 && username.characters.count > 0
         {
+            Services.checkAPI()
             self.proceedToNextBoard()
         }
     }
