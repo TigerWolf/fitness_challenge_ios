@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "CFDEF0C8F7996509B4B76335D4666D8102D211E0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CFDEF0C8F7996509B4B76335D4666D8102D211E0" : 0,
+    "677631F9BBE34B0D330A9F550A710CD11E5252E6" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5EF10475-0991-4426-92EA-EE35933D3FE2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CFDEF0C8F7996509B4B76335D4666D8102D211E0" : "Fitness%20Challenge\/",
+    "677631F9BBE34B0D330A9F550A710CD11E5252E6" : "LoginKit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Fitness Challenge",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Fitness Challenge.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:TigerWolf\/LoginKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "677631F9BBE34B0D330A9F550A710CD11E5252E6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.adelaide.edu.au:mobile-dev\/fitness_challenge_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CFDEF0C8F7996509B4B76335D4666D8102D211E0"
+    }
+  ]
+}
