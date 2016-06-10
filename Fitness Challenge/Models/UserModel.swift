@@ -8,7 +8,7 @@
 
 import Foundation
 import KeychainAccess
-import Rollbar
+//import Rollbar
 
 class User: NSObject, NSCoding {
     
@@ -16,6 +16,7 @@ class User: NSObject, NSCoding {
     let username: String
     var firstName: String?
     var lastName: String?
+    var team: String?
     var email: String?
     var mobile: String?
     var phone: String?
@@ -30,7 +31,7 @@ class User: NSObject, NSCoding {
                     do {
                         try keychain.set(password!, key: "password")
                     } catch {
-                        Rollbar.warningWithMessage("Failed to set password")
+//                        Rollbar.warningWithMessage("Failed to set password")
                     }
                 } else {
                     self.clearPassword()
@@ -43,16 +44,17 @@ class User: NSObject, NSCoding {
         do {
             try keychain.remove("password")
         } catch {
-            Rollbar.warningWithMessage("Failed to clear password")
+//            Rollbar.warningWithMessage("Failed to clear password")
         }
     }
     
-    init(id: String, username: String) {
+    init(id: String, username: String, team: String) {
         self.id = id
         self.username = username
+        self.team = team
         
         // Set Person details
-        Rollbar.currentConfiguration().setPersonId(id, username: username, email: "")
+//        Rollbar.currentConfiguration().setPersonId(id, username: username, email: "")
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -71,13 +73,14 @@ class User: NSObject, NSCoding {
         self.email = aDecoder.decodeObjectForKey("email") as? String
         self.phone = aDecoder.decodeObjectForKey("phone") as? String
         self.mobile = aDecoder.decodeObjectForKey("mobile") as? String
+        self.team = aDecoder.decodeObjectForKey("team") as? String
         
         do {
             if let password = try keychain.get("password") {
                 self.password = password
             }
         } catch {
-            Rollbar.warningWithMessage("Failed to set password")
+//            Rollbar.warningWithMessage("Failed to set password")
         }
     }
     
@@ -99,6 +102,9 @@ class User: NSObject, NSCoding {
         }
         if let phone = self.phone {
             aCoder.encodeObject(phone, forKey: "phone")
+        }
+        if let team = self.team {
+            aCoder.encodeObject(team, forKey: "team")
         }
     }
     
