@@ -15,15 +15,15 @@ class AppearanceController {
     
     static let sharedInstance = AppearanceController()
     
-    let blueColour = UIColor(rgba: "#005a9c")
-    let redColour = UIColor(rgba: "#ed1c2e")
-    let whiteColour = UIColor(rgba: "#FFFFFF")
-    let blackColour = UIColor(rgba: "#000000")
-    let goldColour = UIColor(rgba: "#b38808")
-    let greyColour = UIColor(rgba: "#666666")
+    let blueColour = UIColor(hue: 0.5694, saturation: 1, brightness: 0.61, alpha: 1.0)
+    let redColour = UIColor(hue: 0.9861, saturation: 0.88, brightness: 0.92, alpha: 1.0)
+    let whiteColour = UIColor(hue: 0, saturation: 0, brightness: 1, alpha: 1.0)
+    let blackColour = UIColor(hue: 0, saturation: 0, brightness: 0, alpha: 1.0)
+    let goldColour = UIColor(hue: 0.1222, saturation: 0.95, brightness: 0.7, alpha: 1.0)
+    let greyColour = UIColor(hue: 0, saturation: 0, brightness: 0.4, alpha: 1.0)
     
-    let blueLightColour = UIColor(rgba: "#4391ca")
-    let blueDarkColour = UIColor(rgba: "#013f74")
+    let blueLightColour = UIColor(hue: 0.5694, saturation: 0.66, brightness: 0.79, alpha: 1.0)
+    let blueDarkColour = UIColor(hue: 0.575, saturation: 0.99, brightness: 0.45, alpha: 1.0)
     
     // Edge Padding
     let lpad: CGFloat = 16.0
@@ -40,7 +40,7 @@ class AppearanceController {
         
         // Table settings
         UITableViewHeaderFooterView.appearance().tintColor = blueColour
-        UITableView.appearance().separatorColor = whiteColour.darkerColor(0.05)
+        UITableView.appearance().separatorColor = whiteColour
         UITableViewCell.appearance().tintColor = blueColour
         
         SVProgressHUD.setBackgroundColor(self.whiteColour)

@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 import Eureka
 import Mixpanel
+import LoginKit
 
 import SVProgressHUD
 
@@ -27,7 +28,7 @@ class ActivityViewController: FormViewController {
         getActivities()
         
         self.title = "Log Activity"
-        let logoutButton : UIBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.Plain, target: self, action: "logout:")
+        let logoutButton : UIBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ActivityViewController.logout(_:)))
         self.navigationItem.leftBarButtonItem = logoutButton
         
         let customView = UIView(frame: self.view.frame)
@@ -36,7 +37,7 @@ class ActivityViewController: FormViewController {
     
     func updateInterface(){
         
-        let submitButton : UIBarButtonItem = UIBarButtonItem(title: "Submit", style: UIBarButtonItemStyle.Plain, target: self, action: "submitActivity:")
+        let submitButton : UIBarButtonItem = UIBarButtonItem(title: "Submit", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ActivityViewController.submitActivity(_:)))
         self.navigationItem.rightBarButtonItem = submitButton
         
         
@@ -56,9 +57,10 @@ class ActivityViewController: FormViewController {
             cell.textField.selectAll(nil)
         }
         var team_name = "Not Assigned Yet"
-        if let label = Services.user?.team{
-            team_name = label
-        }
+//        if let label = LoginService.user?.team{
+//            team_name = label
+//        }
+        team_name = "Loading"
         
         let days: [String] = ["Today", "Yesterday"]
         
@@ -80,66 +82,70 @@ class ActivityViewController: FormViewController {
     
     func getLogs(){
         
-        Services.request(.GET, "logs")
-            .responseAPI({ (request, response, result) -> Void in
+        LoginService.request(.GET, "logs")
+            .responseJSON() { response in
                 
-                if let error = result.error as? NSError {
-                    self.showErrorView(true,
-                        animated: false,
-                        title: error.localizedFailureReason,
-                        subtitle: error.localizedDescription)
-                    NSLog("\(error)")
-                    
-                } else if let jsonObj = result.value {
-                    let json = JSON(jsonObj)
+                if response.result.isSuccess {
+                    let json = JSON(response.result.value!)
                     NSLog("GET Result: \(json)")
                     self.didReceiveLogResult(json)
                     self.navigationItem.rightBarButtonItem?.enabled = true
+                } else {
+                    self.showErrorView(true,
+                        animated: false,
+                        title: response.result.error!.localizedFailureReason,
+                        subtitle: response.result.error!.localizedDescription)
+                    NSLog("\(response.result.error)")
+                    
                 }
                 self.showLoadingView(false, animated: true)
-            })
+            }
         
     }
     
     func getUser(){
         
-        Services.request(.GET, "login")
-            .responseAPI({ (request, response, result) -> Void in
+        LoginService.request(.GET, "login")
+            .responseJSON() { response in
                 
-                if let error = result.error as? NSError {
-                    NSLog("\(error)")
-                    
-                } else if let jsonObj = result.value {
-                    let json = JSON(jsonObj)
-                    let current_user = Services.user
+                if response.result.isSuccess {
+                    let json = JSON(response.result.value!)
+                    let current_user = LoginService.user
                     let downloaded_team_name = json["data"]["team"].stringValue
-                    current_user!.team = downloaded_team_name
-                    Services.user! = current_user!
+                    // TODO: implement team
+//                    current_user.team = downloaded_team_name
+                    self.form.setValues(["team": downloaded_team_name])
+                    self.tableView!.reloadData()
+                    LoginService.user! = current_user!
+                
+                } else {
+                    NSLog("\(response.result.error)")
+                    
                 }
-            })
+            }
         
     }
     
     func getAnnouncement(){
         
-        Services.request(.GET, "event")
-            .responseAPI({ (request, response, result) -> Void in
+        LoginService.request(.GET, "event")
+            .responseJSON() { response in
                 
-                if let error = result.error as? NSError {
-                    self.showErrorView(true,
-                        animated: false,
-                        title: error.localizedFailureReason,
-                        subtitle: error.localizedDescription)
-                    NSLog("\(error)")
-                    
-                } else if let jsonObj = result.value {
-                    let json = JSON(jsonObj)
+                if response.result.isSuccess {
+                    let json = JSON(response.result.value!)
                     NSLog("GET Result: \(json)")
                     self.didReceiveAnnouncementResult(json)
                     self.navigationItem.rightBarButtonItem?.enabled = true
+                }else {
+                    self.showErrorView(true,
+                        animated: false,
+                        title: response.result.error!.localizedFailureReason,
+                        subtitle: response.result.error!.localizedDescription)
+                    NSLog("\(response.result.error)")
+                    
                 }
                 self.showLoadingView(false, animated: true)
-            })
+            }
         
     }
     
@@ -175,45 +181,50 @@ class ActivityViewController: FormViewController {
         
         SVProgressHUD.show()
         
-        Services.request(.POST, "logs", parameters: params)
-            .responseAPI({ (request, response, result) -> Void in
-                if let error = result.error as? NSError {
-                    NSLog("\(error)")
-                    SVProgressHUD.showErrorWithStatus("Could not save activity")
-                } else if let jsonObj = result.value {
+        LoginService.request(.POST, "logs", parameters: params)
+            .responseJSON() { response in
+                
+                if response.result.isSuccess {
                     SVProgressHUD.showSuccessWithStatus("Activity saved")
                     self.getLogs()
-                    let json = JSON(jsonObj)
+                    let json = JSON(response.result.value!)
                     NSLog("GET Result: \(json)")
-                    
+                } else {
+                    NSLog("\(response.result.error)")
+                    SVProgressHUD.showErrorWithStatus("Could not save activity")
                 }
                 
-            })
-        
-        
+            }
     }
     
     func getActivities(){
         
-        Services.request(.GET, "activities")
-            .responseAPI({ (request, response, result) -> Void in
+        LoginService.request(.GET, "activities")
+            .responseJSON() { response in
                 
-                if let error = result.error as? NSError {
-                    self.showErrorView(true,
-                        animated: false,
-                        title: error.localizedFailureReason,
-                        subtitle: error.localizedDescription)
-                    NSLog("\(error)")
-                    
-                } else if let jsonObj = result.value {
-                    let json = JSON(jsonObj)
+                if response.result.isSuccess {
+                    let json = JSON(response.result.value!)
                     NSLog("GET Result: \(json)")
                     self.didReceiveResult(json)
                     self.navigationItem.rightBarButtonItem?.enabled = true
                 }
                 
+//                if let error = response.result.error as NSError? {
+//                    self.showErrorView(true,
+//                        animated: false,
+//                        title: error.localizedFailureReason,
+//                        subtitle: error.localizedDescription)
+//                    NSLog("\(error)")
+//                    
+//                } else if let jsonObj = response.result.value {
+//                    let json = JSON(jsonObj)
+//                    NSLog("GET Result: \(json)")
+//                    self.didReceiveResult(json)
+//                    self.navigationItem.rightBarButtonItem?.enabled = true
+//                }
+                
                 self.showLoadingView(false, animated: true)
-            })
+            }
     }
     
     func didReceiveResult(result: JSON){
@@ -295,7 +306,7 @@ class ActivityViewController: FormViewController {
     }
     
     func logout(sender: UIBarButtonItem){
-        Services.logout()
+        LoginService.logoff()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     

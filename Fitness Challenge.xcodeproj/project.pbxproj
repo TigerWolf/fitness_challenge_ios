@@ -19,14 +19,8 @@
 		BAAB853F1BC66DB5000D0DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAAB853D1BC66DB5000D0DB1 /* LaunchScreen.storyboard */; };
 		BAAB854A1BC66DB5000D0DB1 /* Fitness_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85491BC66DB5000D0DB1 /* Fitness_ChallengeTests.swift */; };
 		BAAB85551BC66DB5000D0DB1 /* Fitness_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85541BC66DB5000D0DB1 /* Fitness_ChallengeUITests.swift */; };
-		BAAB85651BC67368000D0DB1 /* ServicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85641BC67368000D0DB1 /* ServicesController.swift */; };
-		BAAB85691BC6745E000D0DB1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85681BC6745E000D0DB1 /* UserModel.swift */; };
-		BAAB856B1BC67493000D0DB1 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB856A1BC67493000D0DB1 /* SettingModel.swift */; };
-		BAAB856D1BC674D6000D0DB1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB856C1BC674D6000D0DB1 /* LoginViewController.swift */; };
 		BAAB856F1BC67500000D0DB1 /* AppearanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB856E1BC67500000D0DB1 /* AppearanceController.swift */; };
-		BAAB85721BC67547000D0DB1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85711BC67547000D0DB1 /* UIColorExtension.swift */; };
-		BAAB85741BC67579000D0DB1 /* NSURLResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85731BC67579000D0DB1 /* NSURLResponseExtension.swift */; };
-		BAAB85761BC67601000D0DB1 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85751BC67601000D0DB1 /* NavController.swift */; };
+		BAAB85761BC67601000D0DB1 /* ActivityNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85751BC67601000D0DB1 /* ActivityNavController.swift */; };
 		BAAB85781BC68D43000D0DB1 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85771BC68D43000D0DB1 /* ActivityViewController.swift */; };
 		BAAB857A1BC737E8000D0DB1 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB85791BC737E8000D0DB1 /* ActivityModel.swift */; };
 		E95E3381646A68009C1A9F22 /* Pods_Fitness_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A947D91524FCF6F205C40D /* Pods_Fitness_Challenge.framework */; };
@@ -69,14 +63,8 @@
 		BAAB85501BC66DB5000D0DB1 /* Fitness ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fitness ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAAB85541BC66DB5000D0DB1 /* Fitness_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fitness_ChallengeUITests.swift; sourceTree = "<group>"; };
 		BAAB85561BC66DB5000D0DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAAB85641BC67368000D0DB1 /* ServicesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServicesController.swift; path = Controllers/ServicesController.swift; sourceTree = "<group>"; };
-		BAAB85681BC6745E000D0DB1 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Models/UserModel.swift; sourceTree = "<group>"; };
-		BAAB856A1BC67493000D0DB1 /* SettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingModel.swift; path = Models/SettingModel.swift; sourceTree = "<group>"; };
-		BAAB856C1BC674D6000D0DB1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		BAAB856E1BC67500000D0DB1 /* AppearanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppearanceController.swift; path = Controllers/AppearanceController.swift; sourceTree = "<group>"; };
-		BAAB85711BC67547000D0DB1 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Helpers/UIColorExtension.swift; sourceTree = "<group>"; };
-		BAAB85731BC67579000D0DB1 /* NSURLResponseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSURLResponseExtension.swift; path = Helpers/NSURLResponseExtension.swift; sourceTree = "<group>"; };
-		BAAB85751BC67601000D0DB1 /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavController.swift; path = Controllers/NavController.swift; sourceTree = "<group>"; };
+		BAAB85751BC67601000D0DB1 /* ActivityNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityNavController.swift; path = Controllers/ActivityNavController.swift; sourceTree = "<group>"; };
 		BAAB85771BC68D43000D0DB1 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityViewController.swift; path = Controllers/ActivityViewController.swift; sourceTree = "<group>"; };
 		BAAB85791BC737E8000D0DB1 /* ActivityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityModel.swift; path = Models/ActivityModel.swift; sourceTree = "<group>"; };
 		BABDDC091BD6066900E09873 /* FitnessChallenge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitnessChallenge-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -209,10 +197,8 @@
 		BAAB85661BC6736B000D0DB1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BAAB85641BC67368000D0DB1 /* ServicesController.swift */,
-				BAAB856C1BC674D6000D0DB1 /* LoginViewController.swift */,
 				BAAB856E1BC67500000D0DB1 /* AppearanceController.swift */,
-				BAAB85751BC67601000D0DB1 /* NavController.swift */,
+				BAAB85751BC67601000D0DB1 /* ActivityNavController.swift */,
 				BAAB85771BC68D43000D0DB1 /* ActivityViewController.swift */,
 			);
 			name = Controllers;
@@ -221,8 +207,6 @@
 		BAAB85671BC6741A000D0DB1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BAAB85681BC6745E000D0DB1 /* UserModel.swift */,
-				BAAB856A1BC67493000D0DB1 /* SettingModel.swift */,
 				BAAB85791BC737E8000D0DB1 /* ActivityModel.swift */,
 				BA63E2611BCCC28600DD59F4 /* LogModel.swift */,
 			);
@@ -232,8 +216,6 @@
 		BAAB85701BC6752E000D0DB1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				BAAB85711BC67547000D0DB1 /* UIColorExtension.swift */,
-				BAAB85731BC67579000D0DB1 /* NSURLResponseExtension.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -509,18 +491,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAAB856D1BC674D6000D0DB1 /* LoginViewController.swift in Sources */,
-				BAAB856B1BC67493000D0DB1 /* SettingModel.swift in Sources */,
 				BAAB85371BC66DB5000D0DB1 /* ViewController.swift in Sources */,
-				BAAB85721BC67547000D0DB1 /* UIColorExtension.swift in Sources */,
 				BAAB856F1BC67500000D0DB1 /* AppearanceController.swift in Sources */,
-				BAAB85761BC67601000D0DB1 /* NavController.swift in Sources */,
-				BAAB85651BC67368000D0DB1 /* ServicesController.swift in Sources */,
-				BAAB85691BC6745E000D0DB1 /* UserModel.swift in Sources */,
+				BAAB85761BC67601000D0DB1 /* ActivityNavController.swift in Sources */,
 				BA05DAFF1BCE15DA003F64AA /* LoadingView.swift in Sources */,
 				BAAB857A1BC737E8000D0DB1 /* ActivityModel.swift in Sources */,
 				BAAB85351BC66DB5000D0DB1 /* AppDelegate.swift in Sources */,
-				BAAB85741BC67579000D0DB1 /* NSURLResponseExtension.swift in Sources */,
 				BA05DAFC1BCE156D003F64AA /* ErrorView.swift in Sources */,
 				BAAB85781BC68D43000D0DB1 /* ActivityViewController.swift in Sources */,
 				BA63E2621BCCC28600DD59F4 /* LogModel.swift in Sources */,

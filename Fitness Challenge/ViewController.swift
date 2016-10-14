@@ -19,25 +19,26 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         
         // Setup
-        LoginKitConfig.url = "https://challengecup.club/"
-        LoginKitConfig.loginPath = "api/v1" // TODO: Remove this for basic auth - or create endpoint?
+        LoginKitConfig.url = "https://challengecup.club/api/v1/"
+        LoginKitConfig.loginPath = "login" // TODO: Remove this for basic auth - or create endpoint?
         LoginKitConfig.authType = AuthType.Basic
         LoginKitConfig.savedLogin = true
-        //        LoginKitConfig.destination = { ()-> UIViewController in JobViewController() }
-        LoginKitConfig.destination = { () -> UIViewController in ActivityViewController() }
+        LoginKitConfig.destination = { () -> UIViewController in ActivityNavController() }
         LoginKitConfig.logoImage = UIImage(named: "logo") ?? UIImage()
         
-        LoginKit.Appearance().backgroundColor = UIColor(hue: 0.5694, saturation: 1, brightness: 0.61, alpha: 1.0)
+        let appearance = LoginKit.Appearance()
+        appearance.backgroundColor = UIColor(hue: 0.5742, saturation: 0.7309, brightness: 0.9765, alpha: 1.0)
+        appearance.buttonColor = UIColor(hue: 0.1333, saturation: 1, brightness: 1, alpha: 1.0)
+        appearance.buttonBorderColor = UIColor(hue: 0.0972, saturation: 0.77, brightness: 0.93, alpha: 1.0)
         
-        let login_screen = LoginKit.loginScreenController() as! LoginController
-        self.presentViewController(login_screen, animated: animated,completion: nil)
+        let loginScreen = LoginKit.loginScreenController() as! LoginController
+        self.presentViewController(loginScreen, animated: animated,completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
